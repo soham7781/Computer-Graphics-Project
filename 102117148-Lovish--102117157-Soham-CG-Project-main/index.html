@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fishes eating food</title>
+  <script src="../../libraries/p5.js" type="text/javascript"></script>
+  <script src="sketch2.js" type="text/javascript"></script>
+  <style> 
+    body {padding: 0; margin: 0; text-align: center; background-color: lightblue; position: relative;} 
+    canvas {vertical-align: top; border: 10px solid rgb(241, 116, 6);}
+    h1, h3 {font-family: sans-serif; margin: 4px 0px;}
+    #download-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: white; /* Green background */
+      border: none;
+      color: white;
+      border-radius: 11px;
+      cursor: pointer;
+      margin-top: 55px;
+    }
+    #download-btn img {
+      width: 60px;
+      height: 60px;
+      vertical-align: middle;
+      margin-right: 0px;
+    }
+    .project-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      align-items: center;
+    }
+    .project-title {
+      font-size: 24px;
+      padding-left: 25px;
+      margin-top: 20px;
+      margin-bottom: 100px;
+    }
+    .credits {
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px; /* Add margin to the top */
+      margin-bottom: 100px;
+    }
+  </style>
+</head>
+<body>
+  <button id="download-btn"><img src="download.png" alt="Download"></button>
+  <div class="project-info">
+    <h3 class="project-title">0x08 : 2D Animations (Project: Fishes Eating Food)</h3>
+    <p class="credits">Created by The Tutors<br>1021177148 : Lovish Bansal | 1021177157 : Soham Kumar</p>
+  </div>
+  <script>
+    document.getElementById('download-btn').addEventListener('click', function() {
+      var canvas = document.querySelector('canvas');
+      var dataURL = canvas.toDataURL('image/png');
+      var link = document.createElement('a');
+      link.download = 'fishes_image.png';
+      link.href = dataURL;
+      link.click();
+    });
+  </script>
+</body>
+</html>
